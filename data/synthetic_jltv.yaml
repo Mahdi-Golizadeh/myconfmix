@@ -1,11 +1,9 @@
 # Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
 
 train:  # train images 
-  - /
+  - /content/train/images
 val:  # val images 
-  - /usr/src/datasets/FoggyCityscapes/images/val/frankfurt
-  - /usr/src/datasets/FoggyCityscapes/images/val/lindau
-  - /usr/src/datasets/FoggyCityscapes/images/val/munster
+  - /content/valid/images
 test:  # test images (optional)
 uda: 
   - /usr/src/datasets/FoggyCityscapes/images/train/aachen
@@ -28,7 +26,7 @@ uda:
   - /usr/src/datasets/FoggyCityscapes/images/train/zurich
 
 # Classes
-nc: 8 # number of classes
-names: ['person', 'car', 'train', 'rider', 'truck', 'motorcycle', 'bicycle', 'bus'] # class names
+nc: 2 # number of classes
+names: ['jltv', 'not jltv'] # class names
 # Download script/URL (optional)
 download: 
