@@ -9,7 +9,7 @@ uda:
   - /content/uda_data/images
 
 # Classes
-nc: 2 # number of classes
-names: ['jltv', 'not jltv'] # class names
+nc: 1 # number of classes
+names: ['jltv'] # class names
 # Download script/URL (optional)
 download: 
