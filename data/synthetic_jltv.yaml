@@ -5,6 +5,7 @@ train:  # train images
 val:  # val images 
   - /content/valid/images
 test:  # test images (optional)
+  - /content/test/images
 uda: 
   - /content/uda_data/images
 
