@@ -379,11 +379,11 @@ def train(hyp, opt, device, callbacks):  # hyp is path/to/hyp.yaml or hyp dictio
                 pseudo_t, pred_t, var_t = pred_t
 
                 # filter pseudo detections on source images applying NMS
-                out_s = non_max_suppression(pseudo_s.detach(), conf_thres=0.25, iou_thres=0.5, multi_label=False)
+                out_s = non_max_suppression(pseudo_s.detach(), conf_thres=0.95, iou_thres=0.5, multi_label=False)
                 out_s = output_to_target(out_s)  # x,y,w,h
 
                 # filter pseudo detections on target images applying NMS
-                out = non_max_suppression(pseudo_t.detach(), conf_thres=0.25, iou_thres=0.5, multi_label=False)
+                out = non_max_suppression(pseudo_t.detach(), conf_thres=0.95, iou_thres=0.5, multi_label=False)
                 # for i, det in enumerate(out):  # per image
                 #     det = det[det[:, 4].argsort(descending=True)]
                 #     max_det = int(len(det) * (max_det_pct/100))
